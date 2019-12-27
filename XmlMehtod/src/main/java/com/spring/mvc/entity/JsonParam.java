@@ -1,4 +1,4 @@
-package com.spring.mvc.controller.entity;
+package com.spring.mvc.entity;
 
 public class JsonParam{
     String name;

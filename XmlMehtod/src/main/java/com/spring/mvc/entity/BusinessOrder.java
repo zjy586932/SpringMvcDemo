@@ -1,4 +1,4 @@
-package com.spring.mvc.controller.entity;
+package com.spring.mvc.entity;
 
 import java.util.List;
 import java.util.Map;
