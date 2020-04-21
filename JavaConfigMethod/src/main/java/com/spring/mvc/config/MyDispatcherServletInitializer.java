@@ -2,21 +2,20 @@ package com.spring.mvc.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class MyServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
-
-
+public class MyDispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{RootConfig.class};
+        return new Class[0];
     }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[]{ServletConfig.class};
+        return new Class[]{WebMvcConfig.class};
     }
 
     @Override
     protected String[] getServletMappings() {
         return new String[]{"/"};
     }
+
 }

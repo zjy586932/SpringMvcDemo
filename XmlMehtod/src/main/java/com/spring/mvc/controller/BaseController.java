@@ -2,6 +2,7 @@ package com.spring.mvc.controller;
 
 import com.spring.mvc.entity.BusinessOrder;
 import com.spring.mvc.entity.JsonParam;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -11,10 +12,13 @@ import java.util.Map;
 @RestController
 public class BaseController {
 
+    @Value("${user}")
+    private String user;
+
     @RequestMapping("/hello")
     @ResponseBody
     public String hello(){
-        return "hello1";
+        return user;
     }
 
     @RequestMapping("/getElectronicInvoice")
